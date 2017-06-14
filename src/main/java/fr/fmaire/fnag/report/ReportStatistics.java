@@ -26,7 +26,9 @@ public final class ReportStatistics {
     }
 
     /**
-     * @param report
+     * The number of products in the report.
+     * 
+     * @param report the report
      * @return the number of products in the report.
      */
     public static int getNumberOfProducts(final Report report) {
@@ -34,7 +36,9 @@ public final class ReportStatistics {
     }
 
     /**
-     * @param report
+     * The number of sales in the report.
+     * 
+     * @param report the report
      * @return the number of sales in the report.
      */
     public static int getNumberOfSales(final Report report) {

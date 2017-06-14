@@ -31,7 +31,7 @@ public class SaleBuilder {
      *
      * @param saleStr the string for a sale in the report file
      * @return the parsed sale
-     * @throws ReportException
+     * @throws ReportException if the sale cannot be parsed
      */
     public static Sale buildFromString(final String saleStr) throws ReportException {
         final String[] parts = saleStr.split(SEP);

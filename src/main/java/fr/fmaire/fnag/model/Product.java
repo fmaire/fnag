@@ -3,7 +3,6 @@ package fr.fmaire.fnag.model;
 /**
  * Product data.
  *
- *
  * @author F.MAIRE(FMI)
  *
  */

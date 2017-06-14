@@ -18,10 +18,10 @@ public class Sale {
     private final int quantity;
 
     /**
-     * @param shopName
-     * @param sellerName
-     * @param productRef
-     * @param quantity
+     * @param shopName the shop name
+     * @param sellerName the seller name
+     * @param productRef the product reference
+     * @param quantity the sold quantity
      */
     public Sale(
             final String shopName,

@@ -32,7 +32,7 @@ public class ProductBuilder {
      *
      * @param productStr the string for a product in the report file
      * @return the parsed product
-     * @throws ReportException
+     * @throws ReportException if the product cannot be parsed, or have incorrect format
      */
     public static Product buildFromString(final String productStr) throws ReportException {
         final String[] parts = productStr.split(SEP);
@@ -44,11 +44,11 @@ public class ProductBuilder {
     }
 
     /**
-     * Check that price have not more than 2 decimal and convert it to cents
+     * Check that price have not more than 2 decimal and convert it to cents.
      *
-     * @param priceStr
-     * @return
-     * @throws ReportException
+     * @param priceStr the price as a string
+     * @return the price in cents
+     * @throws ReportException if the price cannot be parsed, or is incorrect
      */
     private static int priceFromString(final String priceStr) throws ReportException {
         try {

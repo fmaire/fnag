@@ -8,6 +8,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
+ * Tests on Statistics for a report.
+ * 
  * @author F.MAIRE(FMI)
  *
  */
@@ -22,6 +24,7 @@ public class ReportStatisticsTest {
 
     @Test
     public void nominal_topsale() throws ReportException {
+        // nominal TOPSALE case from specifications
         // GIVEN
         final Report report = ReportBuilder.buildFromFile("report1.txt");
         // WHEN
@@ -33,6 +36,7 @@ public class ReportStatisticsTest {
 
     @Test
     public void nominal_topseller() throws ReportException {
+        // nominal TOPSELLER from the specifications
         // GIVEN
         final Report report = ReportBuilder.buildFromFile("report1.txt");
         // WHEN
@@ -44,6 +48,7 @@ public class ReportStatisticsTest {
 
     @Test
     public void duplicate_topsale() throws ReportException {
+        // TOPSALE have more than one element
         // GIVEN
         final Report report = ReportBuilder.buildFromFile("report_duplicatetopsale.txt");
         // WHEN
@@ -71,6 +76,7 @@ public class ReportStatisticsTest {
 
     @Test
     public void duplicate_topseller() throws ReportException {
+        // TOPSELLER have more than one element
         // GIVEN
         final Report report = ReportBuilder.buildFromFile("report_duplicatetopseller.txt");
         // WHEN

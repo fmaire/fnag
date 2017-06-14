@@ -25,7 +25,7 @@ public final class ReportBuilder {
      *
      * @param reportStr the report in a string form
      * @return the report parsed
-     * @throws ReportException
+     * @throws ReportException when the report is not conform
      */
     public static Report buildFromString(final String reportStr) throws ReportException {
         final Report report = new Report();
@@ -70,7 +70,7 @@ public final class ReportBuilder {
      *
      * @param filename of a file report
      * @return the report read
-     * @throws ReportException
+     * @throws ReportException when the report is not conform or the file not found
      */
     public static Report buildFromFile(final String filename) throws ReportException {
         try {

@@ -55,5 +55,5 @@ Résultat attendu :
 ### Sonar
 [Sonar results for the project](https://sonarcloud.io/dashboard?id=fr.fmaire%3Afnag)
 ### Demo
-    mvn exec:java
+    mvn test-compile exec:java
     

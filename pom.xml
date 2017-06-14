@@ -15,11 +15,10 @@
         
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <sonar.organization>fmaire-github</sonar.organization>
-        <sonar.login>4544a7817a3048ece6c9466fbe27b07e5b6f495a</sonar.login>
-        
+        <sonar.login>4544a7817a3048ece6c9466fbe27b07e5b6f495a</sonar.login>        
         
         <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
-        <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
+        <sonar.jacoco.reportPath>${project.basedir}/target/jacoco.exec</sonar.jacoco.reportPath>
         <sonar.language>java</sonar.language>
 
         <slf4j.version>1.7.24</slf4j.version>

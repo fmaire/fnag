@@ -1,4 +1,4 @@
-#Test technique : FNAG
+# Test technique : FNAG
 La FNAG est une chaîne de magasins spécialisés dans les articles pour geeks et geekettes. Chaque mois, les
 boutiques communiquent leurs résultats, qui sont agrégés dans un fichier global. Celui-ci commence par un
 inventaire :
@@ -17,7 +17,7 @@ Les prix comportent au maximum 2 chiffres après la virgule. Le séparateur déc
 champs sont alphanumériques, ils ne contiennent pas de barre verticale. Un vendeur ne travaille que dans une
 seule boutique.
 
-##Objectif
+## Objectif
 Vous êtes chargé(e) d'analyser le fichier pour en extraire des statistiques :
 * le produit le plus vendu, avec son nombre de ventes. Il sera affiché au format :
  >TOPSALE|réf. produit|description|nombre de ventes
@@ -27,7 +27,7 @@ Vous êtes chargé(e) d'analyser le fichier pour en extraire des statistiques :
 
 En cas d'ex-aequo, tous les enregistrements à égalité seront affichés (l'ordre n'a pas d'importance).
 
-##Exemple
+## Exemple
 Données en entrée :
 
     3
@@ -46,7 +46,7 @@ Résultat attendu :
     TOPSALE|T127|T-shirt 'no place like 127.0.0.1'|4
     TOPSELLER|Lyon|Alice|229.98
 
-##Hypothèses / contraintes
+## Hypothèses / contraintes
 * N < 100, M < 1000.
 * le programme doit s'exécuter sur une JVM 1.6 ou supérieure.
 * les données en entrée peuvent être injectées sous une autre forme qu'un fichier (par exemple un test automatisé).

@@ -55,7 +55,7 @@ public final class ReportStatistics {
         // find the top sale value
         final int top = Collections.max(totalByProduct.values()).intValue();
         LOG.debug("Max sales {}", top);
-        LOG.debug(totalByProduct.toString());
+        LOG.debug("Total by products: {}", totalByProduct);
 
         // list all the top sale and create statistic report
         final List<String> topSale = new ArrayList<>();
@@ -84,7 +84,7 @@ public final class ReportStatistics {
         // find the amount for the top seller
         final long top = Collections.max(sellerAmount.values()).longValue();
         LOG.debug("Best seller amount {}", top);
-        LOG.debug(sellerAmount.toString());
+        LOG.debug("Seller/amount {}", sellerAmount);
 
         // list all the top seller and create statistic report
         final List<String> topSeller = new ArrayList<>();

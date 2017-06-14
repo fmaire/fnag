@@ -51,3 +51,9 @@ Résultat attendu :
 * le programme doit s'exécuter sur une JVM 1.6 ou supérieure.
 * les données en entrée peuvent être injectées sous une autre forme qu'un fichier (par exemple un test automatisé).
 
+---
+### Sonar
+[Sonar results for the project](https://sonarcloud.io/dashboard?id=fr.fmaire%3Afnag)
+### Demo
+    mvn exec:java
+    

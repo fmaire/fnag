@@ -1,0 +1,10 @@
+3
+LMUSB|20|Lance-missile USB
+MKB|200|Clavier mécanique
+T127|14.99|T-shirt 'no place like 127.0.0.1'
+5
+Paris|John Doe|LMUSB|1
+Lyon|John Doe|MKB|1
+Lyon|John Doe|T127|2
+Paris|John Doe|T127|1
+Paris|John Doe|T127|1

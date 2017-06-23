@@ -1,8 +1,6 @@
 package fr.fmaire.fnag.report;
 
-import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -27,7 +25,7 @@ public final class ReportStatistics {
 
     /**
      * The number of products in the report.
-     * 
+     *
      * @param report the report
      * @return the number of products in the report.
      */
@@ -37,7 +35,7 @@ public final class ReportStatistics {
 
     /**
      * The number of sales in the report.
-     * 
+     *
      * @param report the report
      * @return the number of sales in the report.
      */
@@ -62,13 +60,11 @@ public final class ReportStatistics {
         LOG.debug("Total by products: {}", totalByProduct);
 
         // list all the top sale and create statistic report
-        final List<String> topSale = new ArrayList<>();
-        totalByProduct.entrySet().stream().filter(entry -> top == entry.getValue()).forEach(entry -> {
-            final String description = report.getProducts().get(entry.getKey()).getDescription();
-            topSale.add(String.format("TOPSALE|%s|%s|%d", entry.getKey(), description, top));
-        });
-
-        return String.join("\n", topSale);
+        return totalByProduct.entrySet().stream() //
+                .filter(entry -> top == entry.getValue()) //
+                .map(entry -> String.format("TOPSALE|%s|%s|%d", entry.getKey(),
+                        report.getProducts().get(entry.getKey()).getDescription(), top))
+                .collect(Collectors.joining("\n"));
     }
 
     /**
@@ -91,10 +87,9 @@ public final class ReportStatistics {
         LOG.debug("Seller/amount {}", sellerAmount);
 
         // list all the top seller and create statistic report
-        final List<String> topSeller = new ArrayList<>();
-        sellerAmount.entrySet().stream().filter(entry -> top == entry.getValue()).forEach(
-                entry -> topSeller.add(String.format(Locale.US, "TOPSELLER|%s|%.2f", entry.getKey(), entry.getValue() / 100.0)));
-
-        return String.join("\n", topSeller);
+        return sellerAmount.entrySet().stream() //
+                .filter(entry -> top == entry.getValue()) //
+                .map(entry -> String.format(Locale.US, "TOPSELLER|%s|%.2f", entry.getKey(), entry.getValue() / 100.0))
+                .collect(Collectors.joining("\n"));
     }
 }
